@@ -25,7 +25,6 @@ fruits_to_show = my_fruit_list.loc[fruits_selected]
 streamlit.dataframe(fruits_to_show)
 # Display the table on the page.
 
-
 # create the repeatable code block (called a function)
 def get_fruityvice_data(this_is_fruit_choice):
   fruityvice_response = requests.get("https://fruityvice.com/api/fruit/" + this_fruit_choice)
@@ -45,16 +44,16 @@ try:
 #streamlit.header("The fruit load list contains:")
 
 #Snowflake-related functions
-def get_fruit_load_list():
-   with my_cnx.cursor() as my_cur:
-        my_cur.execute("select * from fruit_load_list")
-        return my_cur.fetchall()
+#def get_fruit_load_list():
+  # with my_cnx.cursor() as my_cur:
+  #      my_cur.execute("select * from fruit_load_list")
+ #       return my_cur.fetchall()
 
 # Add a button to load the fruit
-if streamlit.button('Get Fruit Load List'):
-   my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
-   my_data_rows = get_fruit_load_list()
-   streamlit.dataframe(my_data_rows)
+#if streamlit.button('Get Fruit Load List'):
+#   my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
+#   my_data_rows = get_fruit_load_list()
+#   streamlit.dataframe(my_data_rows)
 
 # don't run anything past here while we troubleshoot 
 streamlit.stop()
