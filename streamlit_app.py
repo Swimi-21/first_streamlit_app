@@ -44,7 +44,7 @@ try:
         streamlit.dataframe(back_from_function)
 
 except UTLError as e:
-streamlit.error()
+  streamlit.error()
 
 #random text 
 streamlit.header("The fruit load list contains:")
