@@ -60,7 +60,7 @@ def get_fruit_load_list():
 if streamlit.button('Get Fruit List'):
    my_data_rows = get_fruit_load_list()
    streamlit.dataframe(my_data_rows)
-    my_cnx.close()
+  my_cnx.close()
     streamlit.dataframe(my_data_rows)
 
 # don't run anything past here while we troubleshoot 
