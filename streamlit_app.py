@@ -58,10 +58,10 @@ def get_fruit_load_list():
 
 # Add a button to load the fruit
 if streamlit.button('Get Fruit List'):
-   my_data_rows = get_fruit_load_list()
-   streamlit.dataframe(my_data_rows)
+  my_data_rows = get_fruit_load_list()
+  streamlit.dataframe(my_data_rows)
   my_cnx.close()
-    streamlit.dataframe(my_data_rows)
+  streamlit.dataframe(my_data_rows)
 
 # don't run anything past here while we troubleshoot 
 
